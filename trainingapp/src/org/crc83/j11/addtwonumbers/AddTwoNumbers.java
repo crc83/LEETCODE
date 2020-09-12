@@ -2,6 +2,14 @@ package org.crc83.j11.addtwonumbers;
 
 public class AddTwoNumbers {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        return null;
+    }
+
+    public ListNode intToList(int input) {
+        return null;
+    }
+
+    public ListNode addTwoNumbersBS(ListNode l1, ListNode l2) {
         ListNode result = null;
         ListNode resultDigit = null;
         ListNode nextDigit = null;

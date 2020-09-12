@@ -1,5 +1,6 @@
-package org.crc83.j11;
+package org.crc83.j11.twosum;
 
+import org.crc83.j11.twosum.Main;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

@@ -1,4 +1,4 @@
-package org.crc83.j11;
+package org.crc83.j11.twosum;
 
 import java.util.ArrayList;
 import java.util.List;
