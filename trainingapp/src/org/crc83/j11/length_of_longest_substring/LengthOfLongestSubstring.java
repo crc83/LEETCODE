@@ -2,8 +2,12 @@ package org.crc83.j11.length_of_longest_substring;
 
 public class LengthOfLongestSubstring {
 
+    public int lengthOfLongestSubstring(String s) {
+        return lengthOfLongestSubstringStr(s).length();
+    }
 
-    String lengthOfLongestSubstring(String s) {
+
+    public String lengthOfLongestSubstringStr(String s) {
         for (int length = s.length(); length>=0; length--) {
             for (int ofs = 0; ofs <= s.length()-length; ofs++) {
                 String subst = s.substring(ofs, ofs+length);
@@ -14,7 +18,7 @@ public class LengthOfLongestSubstring {
         return "";
     }
 
-    private String noRepeatsInRestOfString(String s) {
+    public String noRepeatsInRestOfString(String s) {
         if (s.length() == 1) {
             return s;
         }
