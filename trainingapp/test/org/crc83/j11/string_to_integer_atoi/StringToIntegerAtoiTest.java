@@ -11,7 +11,8 @@ import static org.junit.jupiter.api.Assertions.*;
 class StringToIntegerAtoiTest {
 
     @ParameterizedTest
-    @CsvSource({"`42`,42", "`        -42`,42", "`4193 with words`,4193", "`words and 987`,0", "`-91283472332`,-2147483648"})
+    @CsvSource({"`+-2`,0", "`3.14`,3",
+            "`42`,42", "`        -42`,-42", "`4193 with words`,4193", "`words and 987`,0", "`-91283472332`,-2147483648","`-`,0", "`-1`,-1"})
     void testStringToIntegerAtoi(@ConvertWith(StrWithWhitespaceConverter.class) String input, int expected) {
         StringToIntegerAtoi main =  new StringToIntegerAtoi();
         assertEquals(expected, main.myAtoi(input));
