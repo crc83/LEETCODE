@@ -1,6 +1,7 @@
 package org.crc83.j11streams;
 
 import java.util.Arrays;
+import java.util.function.BinaryOperator;
 
 public class ListNode {
     int val;
@@ -12,8 +13,13 @@ public class ListNode {
         return new ListNode(i);
     }
 
-    public ListNode join(ListNode head, ListNode tail) {
-        head.next = tail;
+    public static ListNode join(ListNode head, ListNode tail) {
+        ListNode item = head;
+        while (item.next != null) {
+            item =  item.next;
+        }
+        item.next = tail;
+        System.out.println(">>"+head);
         return head;
     }
 
@@ -24,9 +30,6 @@ public class ListNode {
 
     @Override
     public String toString() {
-        return "ListNode{" +
-                "val=" + val +
-                ", next=" + next +
-                '}';
+        return " " + val + ", " + next;
     }
 }

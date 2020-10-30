@@ -29,16 +29,15 @@ class IntersectionOfTwoLinkedListsTest {
         ListNode listNodeA = newInstance(listA);
         ListNode listNodeB = newInstance(listB);
 
-        IntStream.of(listA).peek(System.out::println).count();
-        IntStream.of(listB).peek(System.out::println).count();
+
     }
 
     public ListNode newInstance(int[] listA) {
         return Arrays.stream(listA)
                 .sequential()
                 .mapToObj(ListNode::new)
-                .peek(System.out::println)
-                .findFirst().get();
+                .reduce(ListNode::join)
+                .get();
 
     }
 
